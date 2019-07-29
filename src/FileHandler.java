@@ -12,5 +12,14 @@ public class FileHandler
             System.out.println("Please give a valid name");
             e.printStackTrace();
         }
+
+        streamFileReader file = new streamFileReader();
+        try {
+            String contents = file.fileReader("DataFile.txt");
+            System.out.println(contents);
+        } catch (FileNotFoundException e) {
+            System.out.println("Please give valid name");
+            e.printStackTrace();
+        }
     }
 }
