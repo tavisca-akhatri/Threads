@@ -14,7 +14,7 @@ public class streamFileWriter
         FileOutputStream writer = new FileOutputStream(fileName,true);
         BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(writer);
         try(bufferedOutputStream ) {
-            bufferedOutputStream .write(data.getBytes());
+            bufferedOutputStream.write(data.getBytes());
         } catch (IOException e) {
             System.out.println(e.getMessage());
             e.printStackTrace(); //function related data is stored in stack
