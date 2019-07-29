@@ -14,7 +14,7 @@ public class streamFileReader  //ctrl+alt+m to create a function
 
         try(bufferedInputStream) {
            // byte[] buffer = new byte[reader.available()];  //available checks the stream contents and gives number of characters
-            byte[] buffer = new byte[8];
+            byte[] buffer = new byte[64];
             while(bufferedInputStream.read(buffer)>0){
                 result.append(new String(buffer));
                 buffer = new byte[8];
